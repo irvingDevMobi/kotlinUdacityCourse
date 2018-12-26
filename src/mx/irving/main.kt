@@ -9,9 +9,19 @@ fun main(args: Array<String>) {
     fishExample()*/
     //spiceEx()
     //val derived = Derived()
-    simpleSpiceEx()
+    //simpleSpiceEx()
+    booksEx()
 }
 
 fun buildAquarium() {
     val myAquarium = Aquarium()
+}
+
+
+fun booksEx() {
+    val ebook = Ebook("The machine", "Marquez")
+    ebook.readPage()
+    ebook.readPage()
+    ebook.readPage()
+    print(ebook.getWordsRead())
 }
