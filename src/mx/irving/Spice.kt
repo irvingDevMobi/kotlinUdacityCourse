@@ -1,6 +1,6 @@
 package mx.irving
 
-class Spice(val name: String, val spiciness: String = "mild") {
+class Spice(name: String, val spiciness: String = "mild") {
     init {
         println("$name $spiciness")
     }

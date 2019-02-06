@@ -10,7 +10,8 @@ fun main(args: Array<String>) {
     //spiceEx()
     //val derived = Derived()
     //simpleSpiceEx()
-    booksEx()
+    //booksEx()
+    testCurry()
 }
 
 fun buildAquarium() {
@@ -24,4 +25,10 @@ fun booksEx() {
     ebook.readPage()
     ebook.readPage()
     print(ebook.getWordsRead())
+}
+
+
+fun testCurry() {
+    val curry = Curry("hot")
+    print(curry.color)
 }
