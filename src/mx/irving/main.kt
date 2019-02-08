@@ -3,15 +3,16 @@ package mx.irving
 fun main(args: Array<String>) {
 /*    buildAquarium()
 
-    val spice = SimpleSpice("Valentina","soft")
-    print("Name: ${spice.name}  Spiciness Level: ${spice.heat}")
+    val spicy = SimpleSpice("Valentina","soft")
+    print("Name: ${spicy.name}  Spiciness Level: ${spicy.heat}")
 
     fishExample()*/
     //spiceEx()
     //val derived = Derived()
     //simpleSpiceEx()
     //booksEx()
-    testCurry()
+    //testCurry()
+    spiceContainerEx()
 }
 
 fun buildAquarium() {
