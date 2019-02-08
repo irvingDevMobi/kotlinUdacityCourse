@@ -11,8 +11,8 @@ fun main(args: Array<String>) {
     //val derived = Derived()
     //simpleSpiceEx()
     //booksEx()
-    //testCurry()
-    spiceContainerEx()
+    testCurry()
+    //spiceContainerEx()
 }
 
 fun buildAquarium() {

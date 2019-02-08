@@ -1,6 +1,6 @@
 package mx.irving
 
-abstract class SpiceAbs(name: String,
+sealed class SpiceAbs(name: String,
                         private val spiciness: String = "mild",
                         color: SpiceColor
 ) : SpiceColor by color {
@@ -40,9 +40,13 @@ interface Grinder {
 }
 
 interface SpiceColor {
-    val color: String
+    val color: Color
 }
 
 object YellowSpiceColor : SpiceColor {
-    override val color: String = "yellow"
+    override val color: Color = Color.YELLOW
+}
+
+enum class Color(val rgb: Int) {
+    RED(0XFF0000), GREEN(0X00FF00), BLUE(0X0000FF), YELLOW(0XFFFF00)
 }
