@@ -9,6 +9,10 @@ open class Book(
     open fun readPage() {
         currentPage++
     }
+
+    override fun toString(): String {
+        return "Book(title='$title', author='$author', currentPage=$currentPage)"
+    }
 }
 
 class Ebook(

@@ -13,7 +13,8 @@ fun main(args: Array<String>) {
     //booksEx()
     //testCurry()
     //spiceContainerEx()
-    testBookPairs()
+    //testBookPairs()
+    quiz5()
 }
 
 fun buildAquarium() {
@@ -34,3 +35,30 @@ fun testCurry() {
     val curry = Curry("hot")
     print(curry.color)
 }
+
+fun quiz5() {
+    val hamletTitle = "Hamlet"
+    val midsummerTitle = "A Midsummer Night's Dream"
+    val allBooks = setOf(
+            Book(hamletTitle, williamShakespeareAuthor),
+            Book("Macbeth", williamShakespeareAuthor),
+            Book("Romeo and Juliet", williamShakespeareAuthor),
+            Book("Othello", williamShakespeareAuthor)
+    )
+    val library = mapOf(
+            williamShakespeareAuthor to allBooks
+    )
+
+    library.any { it.value.any { it.title == "Hamlet" } }
+
+    val moreBooks = mutableMapOf<String, String>()
+    moreBooks[hamletTitle] = williamShakespeareAuthor
+
+    moreBooks.getOrPut(midsummerTitle, { williamShakespeareAuthor })
+
+    println(allBooks)
+    println(library)
+    println(moreBooks)
+}
+
+const val williamShakespeareAuthor = "William Shakespeare"
