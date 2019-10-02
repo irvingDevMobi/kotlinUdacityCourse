@@ -1,5 +1,8 @@
 package mx.irving
 
+const val williamShakespeareAuthor = "William Shakespeare"
+
+
 fun main(args: Array<String>) {
 /*    buildAquarium()
 
@@ -60,5 +63,3 @@ fun quiz5() {
     println(library)
     println(moreBooks)
 }
-
-const val williamShakespeareAuthor = "William Shakespeare"
