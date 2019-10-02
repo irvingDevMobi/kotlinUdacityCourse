@@ -4,7 +4,8 @@ const val MAX_LOANS_ALLOWED = 10
 
 open class Book(
         var title: String,
-        var author: String
+        var author: String,
+        var pages: Int = 260
 ) {
     private var currentPage: Int = 0
     private var borrowed: Int = 0
@@ -27,14 +28,16 @@ open class Book(
 
     companion object {
         const val baseUrl = Constants.BASE_URL
+        const val PAGE_WEIGHT = 1.5
     }
 }
 
 class Ebook(
         title: String,
         author: String,
+        pages: Int = 250,
         var format: String = "default"
-) : Book(title, author) {
+) : Book(title, author, pages) {
     private var wordCount: Int = 0
 
     override fun readPage() {
@@ -42,4 +45,10 @@ class Ebook(
     }
 
     fun getWordsRead() = wordCount
+}
+
+fun Book.getWeight() = Book.PAGE_WEIGHT * this.pages
+
+fun Book.turnPages(turnPages: Int) {
+    pages -= turnPages
 }

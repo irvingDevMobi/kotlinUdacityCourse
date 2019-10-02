@@ -17,7 +17,16 @@ fun main(args: Array<String>) {
     //testCurry()
     //spiceContainerEx()
     //testBookPairs()
-    quiz5()
+    quiz9()
+}
+
+fun quiz9() {
+    val myBook = Book("Life of pi", "Irving The Best", 138)
+    val myDog = Puppy("muñeco")
+    while (myBook.pages > 0) {
+        myDog.playWithBook(myBook)
+        println("pages: ${myBook.pages}")
+    }
 }
 
 fun buildAquarium() {
