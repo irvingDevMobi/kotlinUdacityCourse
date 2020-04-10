@@ -16,7 +16,13 @@ class Building<out T : BaseBuildingMaterial>(val baseMaterial: T) {
     }
 }
 
+fun <T : BaseBuildingMaterial> isSmallBuilding(building: Building<T>) {
+    if (building.actualMaterialsNeeded > 500) println("large building")
+    else println("small building")
+}
+
 fun main() {
     val building = Building<Wood>(Wood())
     building.build()
+    isSmallBuilding(building)
 }
