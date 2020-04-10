@@ -6,7 +6,7 @@ class Wood() : BaseBuildingMaterial(4)
 
 class Brick : BaseBuildingMaterial(8)
 
-class Building<T : BaseBuildingMaterial>(val baseMaterial: T) {
+class Building<out T : BaseBuildingMaterial>(val baseMaterial: T) {
     val baseMaterialsNeeded = 100
     val actualMaterialsNeeded: Int
         get() = baseMaterial.numberNeeded * baseMaterialsNeeded
